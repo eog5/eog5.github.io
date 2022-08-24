@@ -1,93 +1,94 @@
-<!DOCYTYPE html>
-<html>
-  <head>
-    <meta http-equiv="refresh" content="7; url='http://www.egustafson.com'" />
-  </head>
-  <body>
-    <p>Please follow <a href="http://www.egustafson.com">this link</a>.</p>
-  </body>
-</html>
-
-<!--
-
 
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta http-equiv="content-type" content="text/html; charset=windows-1252">
-    <style>
-div.container {
-    width: 100%;
-    border: 1px solid gray;
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
 }
 
-header {
-    padding: 1em;
-    color: white;
-    background-color: black;
-    clear: left;
-    text-align: center;
-    line-height: .3
+.bgimg {
+  background-image: url('images/rocketBackgroundBlack.jpg');
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 25px;
 }
 
-footer {
-    padding: 1em;
-    color: white;
-    background-color: black;
-    clear: left;
-    text-align: center;
-    line-height: 0
+.topleft {
+  position: absolute;
+  top: 0;
+  left: 16px;
 }
 
-nav {
-    float: left;
-    max-width: 250px;
-    margin: 0;
-    padding: 1em;
+.bottomleft {
+  position: absolute;
+  bottom: 0;
+  left: 16px;
 }
 
-nav ul {
-    list-style-type: none;
-    padding: 0;
-}
-   
-nav ul a {
-    text-decoration: none;
+.middle {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  text-align: center;
 }
 
-article {
-    margin-left: 170px;
-    border-left: 1px solid gray;
-    padding: 1em;
-    overflow: hidden;
+hr {
+  margin: auto;
+  width: 40%;
 }
-</style> </head>
-  <body id="Index">
-    <div class="container">
-      <header>
-        <h1>Erik O. Gustafson</h1>
-        <p>B.S. Mechanical Engineering, Cornell University, 2018</p>
-        <p>M.Eng. Aerospace Engineering, Cornell University, 2019</p>
-      </header>
-      <nav>
-        <ul>
-          <li style="text-align: center;"><a href="index.html"> Overview </a></li>
-          <li style="text-align: center;"><a href="MTC.html">Mars CubeSats</a></li>
-          <li style="text-align: center;"><a href="EuropaCubeSat.html">Europa
-              CubeSat</a></li>
-          <li style="text-align: center;"><a href="resume.html">Resume</a></li>
-        </ul>
-      </nav>
-      <article>
-        <h1>Overview</h1>
-        <p>This site is hosted with github.io, and is designed to provide public
-          access to Erik Gustafson's academic and personal projects.</p>
-      </article>
-      <footer>
-        <p>January 2019 - eog5@cornell.edu</p>
-      </footer>
-    </div>
-  </body>
+</style>
+<body>
+
+<div class="bgimg">
+  <div class="topleft">
+    <p>egustafson.com</p>
+  </div>
+  <div class="middle">
+    <h1>COMING SOON</h1>
+    <hr>
+    <p id="demo" style="font-size:30px"></p>
+  </div>
+  <div class="bottomleft">
+    <p>egustafson.com</p>
+  </div>
+</div>
+
+<script>
+// Set the date we're counting down to
+var countDownDate = new Date("Aug 23, 2022 00:00:00").getTime();
+
+// Update the count down every 1 second
+var countdownfunction = setInterval(function() {
+
+  // Get todays date and time
+  var now = new Date().getTime();
+
+  // Find the distance between now an the count down date
+  var distance = now - countDownDate;
+
+  // Time calculations for days, hours, minutes and seconds
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Output the result in an element with id="demo"
+  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+  + minutes + "m " + seconds + "s ";
+
+  // If the count down is over, write some text
+  if (distance < 0) {
+    clearInterval(countdownfunction);
+    document.getElementById("demo").innerHTML = "EXPIRED";
+  }
+}, 1000);
+</script>
+
+</body>
 </html>
-
-//-->
