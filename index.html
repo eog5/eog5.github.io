@@ -1,94 +1,82 @@
-
 <!DOCTYPE html>
 <html>
-<style>
-body, html {
-  height: 100%;
-  margin: 0;
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+    <style>
+div.container {
+    width: 100%;
+    border: 1px solid gray;
 }
 
-.bgimg {
-  background-image: url('images/rocketBackgroundBlack.jpg');
-  height: 100%;
-  background-position: center;
-  background-size: cover;
-  position: relative;
-  color: white;
-  font-family: "Courier New", Courier, monospace;
-  font-size: 25px;
+header {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+    line-height: .3
 }
 
-.topleft {
-  position: absolute;
-  top: 0;
-  left: 16px;
+footer {
+    padding: 1em;
+    color: white;
+    background-color: black;
+    clear: left;
+    text-align: center;
+    line-height: 0
 }
 
-.bottomleft {
-  position: absolute;
-  bottom: 0;
-  left: 16px;
+nav {
+    float: left;
+    max-width: 250px;
+    margin: 0;
+    padding: 1em;
 }
 
-.middle {
-  position: absolute;
-  top: 50%;
-  left: 25%;
-  transform: translate(-50%, -50%);
-  text-align: center;
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+   
+nav ul a {
+    text-decoration: none;
 }
 
-hr {
-  margin: auto;
-  width: 40%;
+article {
+    margin-left: 170px;
+    border-left: 1px solid gray;
+    padding: 1em;
+    overflow: hidden;
 }
-</style>
-<body>
-
-<div class="bgimg">
-  <div class="topleft">
-    <p>egustafson.com</p>
-  </div>
-  <div class="middle">
-    <h1>COMING SOON</h1>
-    <hr>
-    <p id="demo" style="font-size:30px"></p>
-  </div>
-  <div class="bottomleft">
-    <p>egustafson.com</p>
-  </div>
-</div>
-
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("Aug 23, 2022 00:00:00").getTime();
-
-// Update the count down every 1 second
-var countdownfunction = setInterval(function() {
-
-  // Get todays date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now an the count down date
-  var distance = now - countDownDate;
-
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-
-  // Output the result in an element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-
-  // If the count down is over, write some text
-  if (distance < 0) {
-    clearInterval(countdownfunction);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
-</script>
-
-</body>
+</style> </head>
+  <body id="Index">
+    <div class="container">
+      <header>
+        <h1>Erik Gustafson</h1>
+      </header>
+      <nav>
+        <ul>
+          <li style="text-align: center;"><a href="index.html"> HOME </a></li>
+          <li style="text-align: left;"> ------------------------------------- </li>
+          <li style="text-align: left;"> Professional </li>
+          <li style="text-align: right;"><a href="MTC.html">Mars CubeSats</a></li>
+          <li style="text-align: right;"><a href="EuropaCubeSat.html">Europa
+              CubeSat</a></li>
+          <li style="text-align: right;"><a href="resume.html">Resume</a></li>
+          <li style="text-align: left;"> ------------------------------------- </li>
+          <li style="text-align: left;"> Personal </li>
+          <li style="text-align: right;"><a href="allCoffee.html"> AllCoffee</a></li>
+          <li style="text-align: left;"> ------------------------------------- </li>
+        </ul>
+      </nav>
+      <article>
+        <h1>Overview</h1>
+        <p>This site is hosted with github.io, and is designed to provide public
+          access to Erik Gustafson's academic and personal projects.</p>
+      </article>
+      <footer>
+        <p>Jan 2024</p>
+      </footer>
+    </div>
+  </body>
 </html>
